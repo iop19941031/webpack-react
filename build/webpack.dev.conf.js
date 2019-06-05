@@ -27,6 +27,15 @@ module.exports = {
                     loader: 'babel-loader',
                 }
             },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+                options: {
+                    fix: true
+                    // eslint options (if necessary)
+                }
+            }
         ],
     },
     devServer: { // 配置webpack-dev-server， 在本地启动一个服务器运行
