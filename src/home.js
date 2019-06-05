@@ -1,10 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { hot } from 'react-hot-loader'
-
-class App extends Component {
+import Appa from './aa'
+// import './a.scss'
+import './a.less'
+class App extends React.Component {
   render () {
     return (
-      <h1>表白任素汐！</h1>
+      <div>
+        <Appa />
+        <h1>表白任素汐22！4</h1>
+      </div>
     )
   }
 }

@@ -29,19 +29,37 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                include: resolve('src'),
                 loader: "eslint-loader",
                 options: {
                     fix: true
                     // eslint options (if necessary)
                 }
+            },
+            {
+                test: /\.css$/,
+                include: resolve('src'),
+                use: ['style-loader', "css-loader", 
+                'postcss-loader'
+            
+            ]
+            },
+            {
+                test: /\.less$/,
+                include: resolve('src'),
+                use: [
+                    "style-loader", // 将 JS 字符串生成为 style 节点
+                    "css-loader", // 将 CSS 转化成 CommonJS 模块
+                    'postcss-loader',
+                    "less-loader" // 将 Less 编译为 CSS
+                ]
             }
         ],
     },
     devServer: { // 配置webpack-dev-server， 在本地启动一个服务器运行
         host: 'localhost', // 服务器的ip地址 希望服务器外可以访问就设置 0.0.0.0
         port: 8088, // 端口
-        open: true, // 自动打开页面
+        open: false, // 自动打开页面
         hot: true, // 设置热更新(引用react热更新必须设置)
     },
     plugins: [
