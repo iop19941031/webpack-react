@@ -39,17 +39,30 @@ module.exports = {
             {
                 test: /\.css$/,
                 include: resolve('src'),
-                use: ['style-loader', "css-loader", 
-                'postcss-loader'
-            
-            ]
+                use: ['style-loader',
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            // hashPrefix: 'hash',
+                        }
+                    }, // 将 CSS 转化成 CommonJS 模块
+                    'postcss-loader'
+
+                ]
             },
             {
                 test: /\.less$/,
                 include: resolve('src'),
                 use: [
                     "style-loader", // 将 JS 字符串生成为 style 节点
-                    "css-loader", // 将 CSS 转化成 CommonJS 模块
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            // hashPrefix: 'hash',
+                        }
+                    }, // 将 CSS 转化成 CommonJS 模块
                     'postcss-loader',
                     "less-loader" // 将 Less 编译为 CSS
                 ]
