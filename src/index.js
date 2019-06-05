@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import App from './home';
 
 ReactDOM.render(
-    <h1>表白任素汐！</h1>,
+    <App />,
     document.getElementById('root')
 )
