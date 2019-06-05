@@ -1,7 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 
-// import './a.scss'
 import a from './aa.less'
 class Appa extends React.Component {
   render () {
