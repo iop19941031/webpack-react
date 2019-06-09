@@ -2,7 +2,6 @@ import Bus from './views/bus'
 import Sandwiches from './views/sandwiches'
 import A from './views/aa'
 import Tacos from './views/tacos'
-import { hot } from 'react-hot-loader'
 const routes = [
   {
     path: '/sandwiches',

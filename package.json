@@ -33,6 +33,8 @@
     "postcss-loader": "^3.0.0",
     "postcss-normalize": "^8.0.0",
     "postcss-preset-env": "^6.6.0",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-extension": "^2.13.8",
     "sanitize.css": "^10.0.0",
     "style-loader": "^0.23.1",
     "sugarss": "^2.0.0",
@@ -44,7 +46,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.9.0",
+    "react-redux": "^7.0.3",
     "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1"
   }
 }
