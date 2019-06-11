@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 import RouteWithSubRoutes from './route_with_sub_routes'
-import routes from '../router'
+import routes from '../../router'
 
 class RouteConfigExample extends React.Component {
   render () {
