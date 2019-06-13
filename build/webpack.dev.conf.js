@@ -74,6 +74,7 @@ module.exports = {
         port: 8088, // 端口
         open: false, // 自动打开页面
         hot: true, // 设置热更新(引用react热更新必须设置)
+        historyApiFallback: true,
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(), // 引入热更新插件(引用react热更新必须设置)，

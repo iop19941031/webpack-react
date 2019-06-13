@@ -1,7 +1,7 @@
-import Bus from './views/bus'
-import Sandwiches from './views/sandwiches'
-import A from './views/aa'
-import Tacos from './views/tacos'
+import Bus from './views/react-router/bus'
+import Sandwiches from './views/react-router/sandwiches'
+import A from './views/css-module/aa'
+import Tacos from './views/react-router/tacos'
 const routes = [
   {
     path: '/sandwiches',

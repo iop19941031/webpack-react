@@ -3,15 +3,22 @@ import { connect } from 'react-redux'
 
 import Action from '../../store/action'
 class App extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      PayIncrease: this.props.PayIncrease,
+      PayDecrease: this.props.PayDecrease
+    }
+  }
   render () {
-    const { PayIncrease, PayDecrease } = this.props
     return (
       <div className="App">
         <div className="App">
           <h2>当月工资为{this.props.tiger}</h2>
           <h2>当月工资为{this.props.ff}</h2>
-          <button onClick={PayIncrease}>升职加薪</button>
-          <button onClick={PayDecrease}>迟到罚款</button>
+          <button onClick={this.state.PayIncrease}>升职加薪</button>
+          <button onClick={this.state.PayDecrease}>迟到罚款</button>
         </div>
       </div>
     )
