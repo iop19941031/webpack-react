@@ -5,9 +5,10 @@ import { Provider } from 'react-redux'
 import store from './store/index'
 import Home from './views/react-router/home'
 import App from './views/store-dome'
-// import index_css from './index.scss'
+import index_css from './index.scss'
 ReactDOM.render(
   <Provider store={store}>
+    <div className={index_css.a}>SCSS</div>
     <Home />
     <App />
   </Provider>,

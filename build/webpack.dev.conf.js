@@ -43,7 +43,7 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            modules: true,
+                            modules: false,
                             // hashPrefix: 'hash',
                         }
                     }, // 将 CSS 转化成 CommonJS 模块
@@ -65,6 +65,27 @@ module.exports = {
                     }, // 将 CSS 转化成 CommonJS 模块
                     'postcss-loader',
                     "less-loader" // 将 Less 编译为 CSS
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: "style-loader" // 将 JS 字符串生成为 style 节点
+                    }, 
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            // hashPrefix: 'hash',
+                        }
+                    }, // 将 CSS 转化成 CommonJS 模块
+                    {
+                        loader: "postcss-loader" // 将 Sass 编译成 CSS
+                    },
+                    {
+                        loader: "sass-loader" // 将 Sass 编译成 CSS
+                    }
                 ]
             }
         ],
