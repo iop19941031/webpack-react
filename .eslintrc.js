@@ -12,12 +12,13 @@ module.exports = {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 2018,
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "plugins": [ //引用第三方的插件
         "react"
     ],
     "rules": {//启用额外的规则或覆盖默认的规则
+        "no-console": "off",
     }
 };
