@@ -2,9 +2,11 @@ import Bus from '../views/react-router/bus'
 import Sandwiches from '../views/react-router/sandwiches'
 import A from '../views/css-module/aa'
 import Tacos from '../views/react-router/tacos'
+import NoMatch from '../views/no-match/index'
 const routes = [
   {
-    path: '/sandwiches',
+    path: '/',
+    activeOnlyWhenExact: true,
     component: Sandwiches
   },
   {
@@ -20,6 +22,10 @@ const routes = [
         component: A
       }
     ]
+  },
+  {
+    path: '/',
+    component: NoMatch
   }
 ]
 

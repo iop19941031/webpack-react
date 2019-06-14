@@ -1,6 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as HashRouter, Route } from 'react-router-dom'
 
 class RouteWithSubRoutes extends React.Component {
   render () {
@@ -8,6 +8,7 @@ class RouteWithSubRoutes extends React.Component {
       <div>
         <Route
           path={this.props.path}
+          exact={this.props.activeOnlyWhenExact}
           render={b => (
             <this.props.component {...b} routes={this.props.routes} />
           )}
