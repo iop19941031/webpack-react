@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import RouteWithSubRoutes from './route_with_sub_routes'
+import RouteWithSubRoutes from '../../store/route-with-sub-routes'
 class Tacos extends React.Component {
   render () {
     return (

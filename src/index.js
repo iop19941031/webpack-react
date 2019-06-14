@@ -3,7 +3,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 
 import store from './store/stote-dools'
-import Home from './views/react-router/home'
+import Home from './router/index'
 import App from './store/index'
 import index_css from './index.scss'
 ReactDOM.render(
