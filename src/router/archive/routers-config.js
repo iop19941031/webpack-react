@@ -1,4 +1,4 @@
-import Bus from '../views/react-router/bus'
+import Bus from '../../views/react-router/bus'
 import React from 'react'
 // import NoMatch from '../views/no-match/index'
 const routes = [
