@@ -1,6 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import { BrowserRouter as HashRouter, Route } from 'react-router-dom'
+import { BrowserRouter as Route } from 'react-router-dom'
 
 class RouteWithSubRoutes extends React.Component {
   render () {
