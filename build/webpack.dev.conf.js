@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 生成html模板
 
 const resolve = (dir) => path.join(__dirname, '..', dir);
+// 分析项目所有包及体积大小（可视化）
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
     mode: 'development', // webpack4新增属性，默认返回production,提供一些默认配置，例如cache:true
@@ -98,6 +100,7 @@ module.exports = {
         historyApiFallback: true,
     },
     plugins: [
+        new BundleAnalyzerPlugin(),
         new webpack.HotModuleReplacementPlugin(), // 引入热更新插件(引用react热更新必须设置)，
         new HtmlWebpackPlugin({
             filename: resolve('/dist/index.html'), // 生成的html文件存放的地址和文件名
