@@ -13,8 +13,8 @@ class App extends React.Component {
   }
   render () {
     return (
-      <div className="App">
-        <div className="App">
+      <div className='App'>
+        <div className='App'>
           <h2>当月工资为{this.props.tiger}</h2>
           <h2>当月工资为{this.props.ff}</h2>
           <button onClick={this.state.PayIncrease}>升职加薪</button>

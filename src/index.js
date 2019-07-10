@@ -9,7 +9,7 @@ import index_css from './index.scss'
 ReactDOM.render(
   <div>
     <Helmet>
-      <meta charSet="utf-8" />
+      <meta charSet='utf-8' />
       <title>My webpack</title>
     </Helmet>
     <Provider store={store}>

@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "standard",//指定eslint规范
+    "extends": ["standard", "standard-jsx"],//指定eslint规范
     "globals": { // 声明在代码中的自定义全局变量
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
