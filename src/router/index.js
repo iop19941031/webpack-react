@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader'
 // import RouteWithSubRoutes from './route-with-sub-routes'
 // import Routes from './routers-config'
 import Links from './links'
-import index_css from './index.scss'
+import indexScss from './index.scss'
 import LinksConfig from './links-config'
 import NoMatch from '../views/no-match/index'
 class RouteConfigExample extends React.Component {
@@ -13,7 +13,7 @@ class RouteConfigExample extends React.Component {
       <div>
         <HashRouter>
           <div>
-            <ul className={index_css.ul}>
+            <ul className={indexScss.ul}>
 
               {LinksConfig.map((route, id) => (
                 <Links key={id} {...route} />

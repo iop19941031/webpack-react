@@ -14,9 +14,15 @@ Axios.interceptors.request.use(
 // respone拦截器
 Axios.interceptors.response.use(
   response => {
+    // console.log('22111', response)
     return response
   },
   error => {
-    return Promise.reject(error)
+    const errorList = /-?[1-9]\d*/g.exec(JSON.parse(JSON.stringify(error)).message)
+    if (errorList.length > 0 && errorList !== undefined) {
+      return Promise.reject(errorList[0])
+    } else {
+      return Promise.reject(error)
+    }
   }
 )

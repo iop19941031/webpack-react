@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import 'babel-polyfill'
-import 'antd/dist/antd.css'
 import { Provider } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import store from './store/stote-dools'
