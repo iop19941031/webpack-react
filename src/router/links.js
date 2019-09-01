@@ -1,20 +1,22 @@
 import React from 'react'
 // import { BrowserRouter as HashRouter, Route } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import MenuLink from './menu-link'
-class A extends React.Component {
-  render () {
-    return (
-      <div>
-        <li>
-          <MenuLink
-            activeOnlyWhenExact={this.props.activeOnlyWhenExact}
-            to={this.props.to}
-            label={this.props.label}
-          />
-        </li>
-      </div>
-    )
-  }
+export default function Links (props) {
+  return (
+    <div>
+      <li>
+        <MenuLink
+          activeOnlyWhenExact={props.activeOnlyWhenExact}
+          to={props.to}
+          label={props.label}
+        />
+      </li>
+    </div>
+  )
 }
-
-export default A
+Links.propTypes = {
+  activeOnlyWhenExact: PropTypes.bool,
+  to: PropTypes.string,
+  label: PropTypes.string
+}

@@ -1,20 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import Action from './action'
-class Store extends React.Component {
-  render () {
-    return (
-      <div className='Store'>
-        <div className='Store'>
-          <h2>当月工资为{this.props.tiger}</h2>
-          <h2>当月工资为{this.props.ff}</h2>
-          <button onClick={this.props.PayIncrease}>升职加薪</button>
-          <button onClick={this.props.PayDecrease}>迟到罚款</button>
-        </div>
+function Store (props) {
+  return (
+    <div>
+      <div>
+        <h2>当月工资为{props.tiger}</h2>
+        <h2>当月工资为{props.ff}</h2>
+        <button onClick={props.PayIncrease}>升职加薪</button>
+        <button onClick={props.PayDecrease}>迟到罚款</button>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 // 需要触发什么行为
@@ -42,6 +39,4 @@ function mapStateToProps (state) {
  * mapDispatchToProps希望你返回包含对应action的object对象
  */
 // 需要渲染什么数据
-Store = connect(mapStateToProps, mapDispatchToProps)(Store)
-
-export default Store
+export default connect(mapStateToProps, mapDispatchToProps)(Store)

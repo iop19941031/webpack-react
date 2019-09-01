@@ -6,30 +6,26 @@ import { hot } from 'react-hot-loader'
 import Links from './links'
 import indexScss from './index.scss'
 import LinksConfig from './links-config'
-import NoMatch from '../views/no-match/index'
-class RouteConfigExample extends React.Component {
-  render () {
-    return (
-      <div>
-        <HashRouter>
-          <div>
-            <ul className={indexScss.ul}>
-
-              {LinksConfig.map((route, id) => (
-                <Links key={id} {...route} />
-              ))}
-            </ul>
-            <Switch>
-              <Route path='/' exact component={Home} />
-              <Route path='/dddd' exact component={WillMatch} />
-              <Route component={NoMatch} />
-            </Switch>
-
-          </div>
-        </HashRouter>
-      </div>
-    )
-  }
+import NoMatch from './no-match/index'
+function RouteConfigExample () {
+  return (
+    <div>
+      <HashRouter>
+        <div>
+          <ul className={indexScss.ul}>
+            {LinksConfig.map((route, id) => (
+              <Links key={id} {...route} />
+            ))}
+          </ul>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/dddd' exact component={WillMatch} />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
+      </HashRouter>
+    </div>
+  )
 }
 function WillMatch () {
   return <h3>Matched!</h3>

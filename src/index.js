@@ -3,9 +3,9 @@ import React from 'react'
 import 'babel-polyfill'
 import { Provider } from 'react-redux'
 import store from './store/stote-dools'
-import Home from './router/index'
 import Store from './store/index'
 import indexScss from './index.scss'
+import Router from './router/index'
 ReactDOM.render(
   <div>
     <div>
@@ -13,7 +13,7 @@ ReactDOM.render(
         <div className={indexScss.a}>SCSS</div>
         <Store />
       </Provider>
-      <Home />
+      <Router />
     </div>
   </div>,
   document.getElementById('root')
