@@ -13,7 +13,9 @@ npm run build
     |   |-- webpack.base.config.js           基本配置
     |   |--webpack.dev.config.js             开发环境配置
     |   └── webpack.prod.config.js           生产环境配置
+    |-- dist                      打包目录
     |-- src                       开发目录（配置完成后基本只在该文件夹开发即可）
+    |   |-- axios                           axios相关
     |   |-- router                          react-router相关
     |   |-- store                           react-redux相关
     |   |-- views                           页面组件
