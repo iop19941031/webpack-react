@@ -2,22 +2,19 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import 'babel-polyfill'
 import { Provider } from 'react-redux'
-import { Helmet } from 'react-helmet'
 import store from './store/stote-dools'
 import Home from './router/index'
-import App from './store/index'
-import index_css from './index.scss'
+import Store from './store/index'
+import indexScss from './index.scss'
 ReactDOM.render(
   <div>
-    <Helmet>
-      <meta charSet='utf-8' />
-      <title>My webpack</title>
-    </Helmet>
-    <Provider store={store}>
-      <div className={index_css.a}>SCSS</div>
+    <div>
+      <Provider store={store}>
+        <div className={indexScss.a}>SCSS</div>
+        <Store />
+      </Provider>
       <Home />
-      <App />
-    </Provider>
+    </div>
   </div>,
   document.getElementById('root')
 )

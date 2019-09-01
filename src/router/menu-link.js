@@ -1,9 +1,6 @@
 import React from 'react'
 import { BrowserRouter as HashRouter, Route, Link } from 'react-router-dom'
 class MenuLink extends React.Component {
-  constructor (props) {
-    super(props)
-  }
   render () {
     return (
       <Route

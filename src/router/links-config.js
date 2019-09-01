@@ -1,4 +1,4 @@
-const link_config = [
+const linkConfig = [
   {
     activeOnlyWhenExact: true,
     to: '/',
@@ -13,4 +13,4 @@ const link_config = [
     label: 'w'
   }
 ]
-export default link_config
+export default linkConfig
