@@ -7,8 +7,8 @@ function Store (props) {
       <div>
         <h2>当月工资为{props.tiger}</h2>
         <h2>当月工资为{props.ff}</h2>
-        <button onClick={props.PayIncrease}>升职加薪</button>
-        <button onClick={props.PayDecrease}>迟到罚款</button>
+        <button onClick={props.handlePayIncrease}>升职加薪</button>
+        <button onClick={props.handlePayDecrease}>迟到罚款</button>
       </div>
     </div>
   )
@@ -18,8 +18,8 @@ function Store (props) {
 function mapDispatchToProps (dispatch) {
   const action = new Action()
   return {
-    PayIncrease: () => dispatch({ type: action.increase() }),
-    PayDecrease: () => dispatch({ type: action.decrease() })
+    handlePayIncrease: () => dispatch({ type: action.increase() }),
+    handlePayDecrease: () => dispatch({ type: action.decrease() })
   }
 }
 
