@@ -1,19 +1,17 @@
 import React from 'react'
 import { BrowserRouter as HashRouter, Route, Switch } from 'react-router-dom'
-import { hot } from 'react-hot-loader'
-// import RouteWithSubRoutes from './route-with-sub-routes'
-// import Routes from './routers-config'
 import Links from './links'
 import indexScss from './index.scss'
-import LinksConfig from './links-config'
+import { linkConfig } from './links-config'
 import NoMatch from './no-match/index'
-function RouteConfigExample () {
+export default function RouteConfigExample () {
+  console.log(linkConfig)
   return (
     <div>
       <HashRouter>
         <div>
           <ul className={indexScss.ul}>
-            {LinksConfig.map((route, id) => (
+            {linkConfig.map((route, id) => (
               <Links key={id} {...route} />
             ))}
           </ul>
@@ -39,4 +37,3 @@ function Home () {
     </p>
   )
 }
-export default hot(module)(RouteConfigExample)
