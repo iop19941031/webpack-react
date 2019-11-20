@@ -27,6 +27,12 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      '@': resolve('src'),
+      '@@': resolve('src/assets')
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: resolve('/dist/index.html'), // 生成的html文件存放的地址和文件名

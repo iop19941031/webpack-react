@@ -87,12 +87,6 @@ module.exports = merge(commonConfig, {
       }
     ]
   },
-  resolve: {
-    alias: {
-      '@': resolve('src'),
-      '@@': resolve('src/assets')
-    }
-  },
   devServer: {
     // 配置webpack-dev-server， 在本地启动一个服务器运行
     // host: 'devw.xsteach.com', // 服务器的ip地址 希望服务器外可以访问就设置 0.0.0.0

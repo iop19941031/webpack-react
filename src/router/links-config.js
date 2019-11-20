@@ -1,4 +1,4 @@
-const linkConfig = [
+export let linkConfig = [
   {
     activeOnlyWhenExact: true,
     to: '/',
@@ -13,4 +13,16 @@ const linkConfig = [
     label: 'w'
   }
 ]
-export default linkConfig
+export function setLinkConfig () {
+  linkConfig = [
+    {
+      activeOnlyWhenExact: true,
+      to: '/',
+      label: 'Tacos2'
+    },
+    {
+      to: '/dddd',
+      label: 'sandwiches'
+    }
+  ]
+}
