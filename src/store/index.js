@@ -7,7 +7,7 @@ import Links from '../router/links'
 import indexScss from '../router/index.scss'
 import { linkConfig } from '../router/links-config'
 import NoMatch from '../router/no-match/index'
-function Store (props) {
+function Store(props) {
   return (
     <div>
       <div>
@@ -37,7 +37,7 @@ function Store (props) {
 }
 
 // 需要触发什么行为
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   const action = new Action()
   return {
     handlePayIncrease: () => dispatch({ type: action.increase() }),
@@ -45,7 +45,7 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     tiger: state.tiger,
     ff: state.ff
@@ -62,10 +62,10 @@ function mapStateToProps (state) {
  */
 // 需要渲染什么数据
 export default connect(mapStateToProps, mapDispatchToProps)(Store)
-function WillMatch () {
+function WillMatch() {
   return <h3>Matched!</h3>
 }
-function Home () {
+function Home() {
   return (
     <p>
       A <code>&lt;Switch></code> renders the first child <code>&lt;Route></code>{' '}

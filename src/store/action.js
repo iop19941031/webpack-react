@@ -1,10 +1,10 @@
 // 这是action
 class Action {
-  decrease () {
+  decrease() {
     return '涨工资'
   }
 
-  increase () {
+  increase() {
     return '扣工资'
   }
 }

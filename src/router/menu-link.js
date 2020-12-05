@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter as HashRouter, Route, Link } from 'react-router-dom'
-export default function MenuLink (props) {
+export default function MenuLink(props) {
   return (
     <Route
       path={props.to}

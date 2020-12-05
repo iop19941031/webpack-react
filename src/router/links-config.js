@@ -13,7 +13,7 @@ export let linkConfig = [
     label: 'w'
   }
 ]
-export function setLinkConfig () {
+export function setLinkConfig() {
   linkConfig = [
     {
       activeOnlyWhenExact: true,

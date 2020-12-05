@@ -4,7 +4,7 @@ import Links from './links'
 import indexScss from './index.scss'
 import { linkConfig } from './links-config'
 import NoMatch from './no-match/index'
-export default function RouteConfigExample () {
+export default function RouteConfigExample() {
   console.log(linkConfig)
   return (
     <div>
@@ -25,10 +25,10 @@ export default function RouteConfigExample () {
     </div>
   )
 }
-function WillMatch () {
+function WillMatch() {
   return <h3>Matched!</h3>
 }
-function Home () {
+function Home() {
   return (
     <p>
       A <code>&lt;Switch></code> renders the first child <code>&lt;Route></code>{' '}
