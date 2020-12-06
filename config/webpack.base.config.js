@@ -43,11 +43,7 @@ module.exports = {
             }
           },
           {
-            loader: isDev ? 'eslint-loader' : 'babel-loader',
-            options: isDev ? {
-              fix: true
-              // eslint options (if necessary)
-            } : {}
+            loader: 'babel-loader',
           }
         ]
       },
