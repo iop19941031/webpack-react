@@ -1,12 +1,11 @@
 const commonConfig = require('./webpack.base.config.js')
-const resolve = dir => path.join(__dirname, '..', dir)
 const path = require('path')
-const webpack = require('webpack')
 const TerserPlugin = require('terser-webpack-plugin');
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
+const resolve = dir => path.join(__dirname, '..', dir)
 module.exports = merge(commonConfig, {
   mode: 'development',
   devtool: 'eval',

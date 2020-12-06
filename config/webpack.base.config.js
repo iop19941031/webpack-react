@@ -1,9 +1,8 @@
 const path = require('path')
-
-const isDev = process.env.NODE_ENV === 'development'
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const resolve = dir => path.join(__dirname, '..', dir)
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 生成html模板
+
+const resolve = dir => path.join(__dirname, '..', dir)
+
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
@@ -67,7 +66,7 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(),
+
     new HtmlWebpackPlugin(
       {
         // https://github.com/jantimon/html-webpack-plugin#minification

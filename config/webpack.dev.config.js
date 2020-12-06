@@ -2,11 +2,11 @@ const commonConfig = require('./webpack.base.config.js')
 const path = require('path')
 const { merge } = require('webpack-merge')
 const webpack = require('webpack')
-
-const resolve = dir => path.join(__dirname, '..', dir)
 // 分析项目所有包及体积大小（可视化）
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
+
+const resolve = dir => path.join(__dirname, '..', dir)
 
 module.exports = merge(commonConfig, {
   mode: 'development', // webpack4新增属性，默认返回production,提供一些默认配置，例如cache:true

@@ -1,12 +1,12 @@
 const commonConfig = require('./webpack.base.config.js')
-const resolve = dir => path.join(__dirname, '..', dir)
 const path = require('path')
-const webpack = require('webpack')
 const { merge } = require('webpack-merge')
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+const resolve = dir => path.join(__dirname, '..', dir)
 
 module.exports = merge(commonConfig, {
   mode: 'production', // webpack4新增属性，默认返回production,提供一些默认配置，例如cache:true
@@ -111,7 +111,7 @@ module.exports = merge(commonConfig, {
     },
   },
   plugins: [
-
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'asset/css/[name].[hash].css',
       chunkFilename: 'asset/css/[id].[chunkhash].css',
