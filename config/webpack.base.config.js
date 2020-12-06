@@ -1,12 +1,16 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV === 'development'
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const resolve = dir => path.join(__dirname, '..', dir)
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 生成html模板
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
+  output: {
+    filename: 'asset/js/[name][hash].js', // 生成的js文件的名字
+    chunkFilename: "asset/js/chunk.[chunkhash].js", // 长效缓存(/guides/caching)
+    path: path.resolve(__dirname, '..', 'dist') // 生成的js存放目录
+  },
   module: {
     // 配置loader
     rules: [
@@ -67,6 +71,7 @@ module.exports = {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin(
       {
         // https://github.com/jantimon/html-webpack-plugin#minification

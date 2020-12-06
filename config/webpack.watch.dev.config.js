@@ -2,14 +2,14 @@ const commonConfig = require('./webpack.base.config.js')
 const resolve = dir => path.join(__dirname, '..', dir)
 const path = require('path')
 const webpack = require('webpack')
-const { merge } = require('webpack-merge')
-
 const TerserPlugin = require('terser-webpack-plugin');
+const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = merge(commonConfig, {
-  mode: 'production', // webpack4新增属性，默认返回production,提供一些默认配置，例如cache:true
+  mode: 'development',
+  devtool: 'eval',
   module: {
     // 配置loader
     rules: [
@@ -71,8 +71,15 @@ module.exports = merge(commonConfig, {
       }
     ]
   },
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000,
+    // ignored: ['node_modules']
+    ignored: /node_modules/
+  },
   optimization: {
-    moduleIds: 'size',
+    moduleIds: 'named',
     minimize: true,
     // 告诉webpack使用TerserPlugin最小化捆绑包
     minimizer: [
@@ -111,7 +118,6 @@ module.exports = merge(commonConfig, {
     },
   },
   plugins: [
-
     new MiniCssExtractPlugin({
       filename: 'asset/css/[name].[hash].css',
       chunkFilename: 'asset/css/[id].[chunkhash].css',
